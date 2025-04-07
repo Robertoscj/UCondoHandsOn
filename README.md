@@ -62,3 +62,25 @@ O projeto conta com testes unitários, que podem ser executados de forma simples
 
 🧪➡️ dotnet test
 
+🚀 Assim que o projeto for iniciado, ele estará pronto para receber requisições HTTP em um servidor local no seguinte endereço:
+
+🌐 Base URL:
+
+http://localhost:5001
+
+📌 Endpoints disponíveis:
+
+📄 Listar plano de contas:
+GET http://localhost:5001/api/accounts
+
+➕ Criar nova conta:
+POST http://localhost:5001/api/accounts
+
+❌ Excluir conta (e seus filhos):
+DELETE http://localhost:5001/api/accounts/<code>
+
+🔢 Obter sugestão de código para próximo filho:
+GET http://localhost:5001/api/accounts/<code>/next
+
+
+
