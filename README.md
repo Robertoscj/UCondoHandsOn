@@ -54,7 +54,7 @@ Lá dentro, encontre o bloco:
 
 🔄 Substitua "sua_connection_string" pela nova configuração do seu banco. Depois disso, é só rodar o projeto normalmente!
 
-🧩 O projeto foi construído com o EntityFrameworkCore utilizando a abordagem Code First, e as migrações são aplicadas de forma automática ⚙️. Isso quer dizer que, ao atualizar a connection string e executar a aplicação ▶️, todas as tabelas e estruturas do banco de dados serão criadas automaticamente 🛠️ sem que você precise rodar comandos manuais ou realizar configurações adicionais. Simples assim!
+🧩 O projeto foi construído com o EntityFrameworkCore , e as migrações são aplicadas de forma automática ⚙️. Isso quer dizer que, ao atualizar a connection string e executar a aplicação ▶️, todas as tabelas e estruturas do banco de dados serão criadas automaticamente 🛠️ sem que você precise rodar comandos manuais ou realizar configurações adicionais. Simples assim!
 
 ## Testes unitários
 
