@@ -76,11 +76,13 @@ GET https://localhost:5001/api/accounts
 ➕ Criar nova conta:
 POST https://localhost:5001/api/accounts
 
+🔢 Obter sugestão de código para próximo filho:
+GET https://localhost:5001/api/accounts/<code>/next
+
 ❌ Excluir conta (e seus filhos):
 DELETE https://localhost:5001/api/accounts/<code>
 
-🔢 Obter sugestão de código para próximo filho:
-GET https://localhost:5001/api/accounts/<code>/next
+
 
 
 
