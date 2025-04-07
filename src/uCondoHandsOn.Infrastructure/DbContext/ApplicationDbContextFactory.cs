@@ -9,7 +9,7 @@ namespace uCondoHandsOn.Infrastructure.DbContext
         public ApplicationDbContext CreateDbContext(string[] args)
         {
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-                    .UseSqlServer("localhost")
+                    .UseSqlServer("sua_connection_string_local")
                     .EnableSensitiveDataLogging()
                     .Options;
 
