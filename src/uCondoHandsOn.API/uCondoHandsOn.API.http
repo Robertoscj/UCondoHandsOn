@@ -1,0 +1,6 @@
+@uCondo.Planos.API_HostAddress = http://localhost:5030
+
+GET {{uCondo.Planos.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
