@@ -22,9 +22,9 @@ Esta API fornece funcionalidades para gerenciamento de planos de contas no siste
 ```plaintext
 ├── src/
 │   ├── uCondoHandsOn.API/           # Projeto da API
+│   ├── uCondoHandsOn.Application/   # Casos de uso e DTOs       
 │   ├── uCondoHandsOn.Domain/        # Regras de negócio e entidades
-│   ├── uCondoHandsOn.Infrastructure/# Acesso a dados e serviços externos
-│   └── uCondoHandsOn.Application/   # Casos de uso e DTOs
+│   └── uCondoHandsOn.Infrastructure/# Acesso a dados e serviços externos   
 └── tests/
     └── uCondoHandsOn.Tests/         # Testes unitários e de integração
 ```
@@ -33,6 +33,6 @@ Esta API fornece funcionalidades para gerenciamento de planos de contas no siste
 
 ### 1. Clonar o Repositório
 ```bash
-git clone [repository-url]
+git clone https://github.com/Robertoscj/UCondoHandsOn.git 
 cd UCondoHandsOn
 ```
