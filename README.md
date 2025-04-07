@@ -8,7 +8,6 @@ Esta API fornece funcionalidades para gerenciamento de planos de contas no siste
 - Entity Framework Core 8.0
 - SQL Server
 - Swagger/OpenAPI
-- Mapper
 - JWT e OAuth2 para autenticação
 - xUnit para testes
 
