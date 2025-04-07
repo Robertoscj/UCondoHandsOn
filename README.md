@@ -58,7 +58,7 @@ Lá dentro, encontre o bloco:
 
 ## Testes unitários
 
-O projeto conta com testes unitários, que podem ser executados de forma simples tanto pela sua IDE de preferência 🧠💻 quanto via terminal 🖥️, usando o comando abaixo:
+O projeto conta com testes unitários, que podem ser executados de forma simples tanto por uma IDE de preferência 🧠💻 quanto via terminal 🖥️, usando o comando abaixo:
 
 🧪➡️ dotnet test
 
