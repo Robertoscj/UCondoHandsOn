@@ -66,21 +66,21 @@ O projeto conta com testes unitários, que podem ser executados de forma simples
 
 🌐 Base URL:
 
-http://localhost:5001
+https://localhost:5001/swagger/index.html
 
 📌 Endpoints disponíveis:
 
 📄 Listar plano de contas:
-GET http://localhost:5001/api/accounts
+GET https://localhost:5001/api/accounts
 
 ➕ Criar nova conta:
-POST http://localhost:5001/api/accounts
+POST https://localhost:5001/api/accounts
 
 ❌ Excluir conta (e seus filhos):
-DELETE http://localhost:5001/api/accounts/<code>
+DELETE https://localhost:5001/api/accounts/<code>
 
 🔢 Obter sugestão de código para próximo filho:
-GET http://localhost:5001/api/accounts/<code>/next
+GET https://localhost:5001/api/accounts/<code>/next
 
 
 
