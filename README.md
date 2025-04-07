@@ -36,3 +36,29 @@ Esta API fornece funcionalidades para gerenciamento de planos de contas no siste
 git clone https://github.com/Robertoscj/UCondoHandsOn.git 
 cd UCondoHandsOn
 ```
+## Instruções de execução
+
+🔧 Certifique-se de que o SDK do .NET 8 esteja instalado no seu sistema. Como o projeto é multiplataforma 🌐, você poderá executá-lo tranquilamente em qualquer ambiente: seja no Windows 🪟, Linux 🐧 ou macOS 🍎.
+
+🧪➡️ dotnet run ou dotnet watch run 
+
+🛠️ Caso queira utilizar um banco de dados diferente seja local 🖥️ ou em nuvem ☁️ , basta ajustar a string de conexão no arquivo appsettings.Development.json, que fica no caminho:
+
+📁 uCondoHandsOn.API/appsettings.Development.json
+
+Lá dentro, encontre o bloco:
+
+"ConnectionStrings": {
+  "Connections": "sua_connection_string"
+}
+
+🔄 Substitua "sua_connection_string" pela nova configuração do seu banco. Depois disso, é só rodar o projeto normalmente!
+
+🧩 O projeto foi construído com o EntityFrameworkCore utilizando a abordagem Code First, e as migrações são aplicadas de forma automática ⚙️. Isso quer dizer que, ao atualizar a connection string e executar a aplicação ▶️, todas as tabelas e estruturas do banco de dados serão criadas automaticamente 🛠️ sem que você precise rodar comandos manuais ou realizar configurações adicionais. Simples assim!
+
+## Testes unitários
+
+O projeto conta com testes unitários, que podem ser executados de forma simples tanto pela sua IDE de preferência 🧠💻 quanto via terminal 🖥️, usando o comando abaixo:
+
+🧪➡️ dotnet test
+
