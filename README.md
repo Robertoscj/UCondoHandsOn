@@ -55,6 +55,33 @@ Lá dentro, encontre o bloco:
 
 🧩 O projeto foi construído com o EntityFrameworkCore , e as migrações são aplicadas de forma automática ⚙️. Isso quer dizer que, ao atualizar a connection string e executar a aplicação ▶️, todas as tabelas e estruturas do banco de dados serão criadas automaticamente 🛠️ sem que você precise rodar comandos manuais ou realizar configurações adicionais. Simples assim!
 
+
+🧱 Como aplicar as Migrations (EF Core)
+
+O fluxo de migrações com Entity Framework Core está configurado para uso entre projetos separados seguindo a Clean Architecture. Veja o passo a passo completo:
+
+1. Criar uma Migration
+
+Abra o terminal na raiz da solução e rode:
+
+dotnet ef migrations add NomeDaMigration --project src/uCondoHandsOn.Infrastructure --startup-project src/uCondoHandsOn.API
+
+O parâmetro --project aponta para o projeto onde está o ApplicationDbContext e o DbContextFactory.
+O parâmetro --startup-project aponta para o projeto da API que contém o Program.cs com as configurações da aplicação.
+
+2. Aplicar a Migration no banco de dados
+
+Após criar a migration, aplique as alterações no banco com:
+
+dotnet ef database update --project src/uCondoHandsOn.Infrastructure --startup-project src/uCondoHandsOn.API
+
+⚠️ Certifique-se de que a connection string no ApplicationDbContextFactory.cs seja válida. Exemplo:
+
+.UseSqlServer("Server=localhost;Database=uCondoDb;Trusted_Connection=True;TrustServerCertificate=True;")
+
+Essa configuração é usada durante o design-time para criação de migrations e update no banco. Em produção, o Program.cs utiliza o appsettings.json.
+
+
 ## Testes unitários
 
 O projeto conta com testes unitários, que podem ser executados de forma simples tanto por uma IDE de preferência 🧠💻 quanto via terminal 🖥️, usando o comando abaixo:
