@@ -34,11 +34,18 @@ namespace uCondoHandsOn.Application.Tests
 
     private readonly AccountEntity _incomeChilds = new AccountEntity
     {
-        Code = "1.10",
+        Code = "1.8",
         ParentCode = "1",
-        Name = "Incomes Childs 10",
+        Name = "Incomes Childs 8",
         Type = AccountType.Income
- };
+    };
+
+    private readonly AccountEntity _NotAllowChildren = new AccountEntity
+    {
+        Code = "1",
+        AllowEntries = true,
+        Name = " Not Allow Children"
+    };
 
 
 
