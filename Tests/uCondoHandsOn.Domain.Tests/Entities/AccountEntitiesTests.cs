@@ -45,17 +45,18 @@ namespace uCondoHandsOn.Domain.Tests.Entities
                         new Account{ Code = "1.8"},
                         new Account{ Code = "1.4"},      
                     }
-
                 }
             };
 
-            var orderEntity = entitie.OrderByDescending(x => x).ToList();
+            var orderEntity = entitie.First().Children.OrderBy(x => x).ToList();
 
-            Assert.Equal("6", orderEntity[0].Code);
-            Assert.Equal("5", orderEntity[1].Code);
-            Assert.Equal("4", orderEntity[2].Code);
-            Assert.Equal("3", orderEntity[3].Code);
-            Assert.Equal("2", orderEntity[4].Code);
-            Assert.Equal("1", orderEntity[5].Code);
+            Assert.Equal("1.1", orderEntity[0].Code);
+            Assert.Equal("1.2", orderEntity[1].Code);
+            Assert.Equal("1.3", orderEntity[2].Code);
+            Assert.Equal("1.4", orderEntity[3].Code);
+            Assert.Equal("1.8", orderEntity[4].Code);
+            Assert.Equal("1.16", orderEntity[5].Code);
         }
+}
+
 }
