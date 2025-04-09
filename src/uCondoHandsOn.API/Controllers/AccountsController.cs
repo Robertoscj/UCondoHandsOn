@@ -1,6 +1,4 @@
-
 using Microsoft.AspNetCore.Mvc;
-using uCondoHandsOn.API.Controllers;
 using uCondoHandsOn.Domain.Dto;
 using uCondoHandsOn.Domain.Enums;
 using uCondoHandsOn.Domain.Interfaces;
@@ -10,11 +8,12 @@ namespace uCondoHandsOn.API.Controllers
 {
     [ApiController]
     [Route("api/accounts")]
-    public class AccountsController : BaseController
+    public class AccountController : BaseController
     {
-        private readonly IAccountService _accountService;
+       private readonly IAccountService _accountService;
 
-       public AccountsController(IAccountService accountService)
+        
+       public AccountController(IAccountService accountService)
         {
             _accountService = accountService;
         }

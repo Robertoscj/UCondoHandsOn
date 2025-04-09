@@ -3,12 +3,11 @@ using uCondoHandsOn.Domain.Entities;
 using uCondoHandsOn.Domain.Enums;
 using uCondoHandsOn.Domain.Interfaces;
 using uCondoHandsOn.Domain.Mappings;
-using uCondoHandsOn.Domain.Services;
 using uCondoHandsOn.Domain.Validation;
 
 namespace uCondoHandsOn.Application.Services
 {
-    public class AccountService : IAccountsService
+    public class AccountService : IAccountService
     {
         private readonly IAccountRepository _accountRepository;
        

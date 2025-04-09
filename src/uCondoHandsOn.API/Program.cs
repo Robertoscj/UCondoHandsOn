@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore;
 using uCondoHandsOn.Infra.Context;
 using uCondoHandsOn.Domain.Interfaces;
 using uCondoHandsOn.Infrastructure.Repositories;
-using uCondoHandsOn.Domain.Services;
 using uCondoHandsOn.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -109,13 +108,25 @@ builder.Services.AddRateLimiter(options =>
             }));
 });
 
+
+// ✅ CORS liberado para desenvolvimento/localhost
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // Add DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add Repository and Service
 builder.Services.AddTransient<IAccountRepository, AccountRepository>();
-builder.Services.AddTransient<IAccountsService, AccountService>();
+builder.Services.AddTransient<IAccountService, AccountService>();
 builder.Services.AddTransient<ExceptionMiddleware>();
 
 var app = builder.Build();
